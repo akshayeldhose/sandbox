@@ -28,7 +28,8 @@ with open("pshell.ps1",encoding='Windows-1252') as myfile:
         if restart in myline:
             myline=myline.replace("-Body \"","")
             myline=myline.replace("`\"","\"")
-            myline=myline.replace("\";","")
+            myline=myline.replace("}\";","}")
+            myline=myline.replace("}\"","}")
             mylines.append(myline)
 
 i=0
@@ -42,8 +43,8 @@ for z in range(len(mylines)):
     i=0
     num=str(z)
     for i in range(len(globals()[q+num].get("dataQuery"))):
-        print((globals()[q+num].get("dataQuery")[i].get("dataLabel")).upper())
-        print("=================================================")
+        print("--"+(globals()[q+num].get("dataQuery")[i].get("dataLabel")).upper())
+        print("--=================================================")
         if len(globals()[q+num].get("dataQuery")[i].get("queryParams").get("fields")) != 0 :
             print("SELECT",end=" ")
             if(globals()[q+num].get("dataQuery")[i].get("queryParams").get("distinct") is True):
@@ -98,4 +99,3 @@ for z in range(len(mylines)):
         if len(globals()[q+num].get("dataQuery")[i].get("queryParams").get("limit")) != 0:
             j=0
             print("LIMIT",globals()[q+num].get("dataQuery")[i].get("queryParams").get("limit"))
-
