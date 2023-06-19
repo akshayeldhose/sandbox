@@ -1,5 +1,26 @@
 import json
 
+# with open("pshell.ps1",encoding='Windows-1252') as f:
+#     content = f.read()
+
+# print(content.count("Body"))
+
+#print(content)
+#content=content.replace("$session","session")
+#print(content)
+#str_output = re.sub("^session.*Body", "", content)
+#print(str_output)
+
+# write = True
+# stop = "New-Object"
+
+# output = r"PS_to_Druid_Temp/temp.txt"
+
+# with open("pshell.ps1",encoding='Windows-1252') as f, open(output, "w") as newf:
+#     for line in f:
+#       if restart in line:
+#         q = json.loads(line)
+
 restart = "Body"
 mylines = []                            
 with open("pshell.ps1",encoding='Windows-1252') as myfile:
@@ -78,3 +99,4 @@ for z in range(len(mylines)):
         if len(globals()[q+num].get("dataQuery")[i].get("queryParams").get("limit")) != 0:
             j=0
             print("LIMIT",globals()[q+num].get("dataQuery")[i].get("queryParams").get("limit"))
+
