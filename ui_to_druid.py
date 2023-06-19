@@ -4,48 +4,6 @@ input = '''
 #replace_with_json_query
 '''
 
-# with open('json.json') as input_file:
-#     data = json.load(input_file)
-
-# with open("pshell.ps1",encoding='Windows-1252') as f:
-#     content = f.read()
-
-# test = content
-
-# test=test.replace(");", "")
-# test=test.replace("\'", "\"")
-# test=test.replace("$session","session")
-# str_output = re.sub("^session.*Body '", "", test)
-# str_output = str_output[:-1]
-# str_output=str_output.replace("'","\"")
-# str_output=str_output.replace("`","")
-
-# print(str_output)
-
-# json_object = json.loads(file)
-# print(json_object[1])
-
-# file=open("json.json")
-# data=file
-# config=data.get("config").get("parserConfig").get("fields")
-# schema=[(i.get("fieldName"),i.get("fieldType")) for i in config]
-
-# config2=data.get("config").get("fieldTransformations")[0].get("config")
-
-# field_names=config2.keys()
-# field_values=config2.values()
-# print(field_names)
-# print(field_values)
-# schema=[(i.get("fieldName"),i.get("fieldType")) for i in config2]
-# test=[i.get("config").get("employee_hire_date_timestamp") for i in config2]
-# print(test)
-# print(type(test))
-# test=str(test)
-# print(type(test))
-
-# if "as" or "AS" or "As" in test:
-#     print("Found!")
-
 data = json.loads(input)
 
 i=0
